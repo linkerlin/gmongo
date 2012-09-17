@@ -9,7 +9,7 @@ class UsageTest extends IntegrationTestCase {
     assert db.myCollection instanceof com.mongodb.DBCollection
     // They also can be accessed with array notation 
     assert db['my.collection'] instanceof com.mongodb.DBCollection
-
+    db.languages.drop()
     // Insert a document
     db.languages.insert([name: 'Groovy'])
     // A less verbose way to do it
